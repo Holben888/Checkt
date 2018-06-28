@@ -1,0 +1,55 @@
+{
+    "todoList": [
+        {
+            "title": "Finish reading Hooked",
+            "priority": 2,
+            "dateTime": "2018-06-11T16:25:43.511Z",
+            "useTime": false,
+            "duration": null,
+            "isOngoing": false,
+            "recurring": {
+                "time": "2018-05-13T18:30:43.511Z",
+                "days": "MWF"
+            }
+        },
+        {
+            "title": "Work on user management UI",
+            "priority": 1,
+            "dateTime": "2018-06-13T14:30:43.511Z",
+            "useTime": true,
+            "duration": null,
+            "isOngoing": true,
+            "recurring": null
+        },
+        {
+            "title": "Work on math hw",
+            "priority": 2,
+            "dateTime": "2018-06-13T16:25:43.511Z",
+            "useTime": false,
+            "duration": null,
+            "isOngoing": false,
+            "recurring": {
+                "time": null,
+                "days": "MWF"
+            }
+        },
+        // {
+        //     "title": "Practice piano for a very, VERY long time boiiiiiiii now let's keep going and make it longer and longer and longer until the box has to resize",
+        //     "priority": 4,
+        //     "dateTime": "2018-06-13T16:25:43.511Z",
+        //     "useTime": false,
+        //     "duration": 60,
+        //     "isOngoing": false,
+        //     "recurring": null
+        // },
+        {
+            "title": "Practice piano",
+            "priority": 4,
+            "dateTime": "2018-06-13T16:25:43.511Z",
+            "useTime": false,
+            "duration": 60,
+            "isOngoing": false,
+            "recurring": null
+        }
+    ]
+}
