@@ -5,6 +5,9 @@ import AllPage from './allPage';
 import { View, Text } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import AddModal from './addModal';
+import * as Actions from './actions';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 class Page extends Component {
     constructor() {
@@ -15,8 +18,13 @@ class Page extends Component {
         this.state = {
             ...this.state,
             title: 'Week',
+            phrasesFlattened: [],
+            phraseData: {},
             displayAddModal: false,
         }
+    }
+    componentWillMount() {
+        this.props.getTodoList();
     }
     footerPressHandler(itemName) {
         this.setState({
@@ -28,7 +36,6 @@ class Page extends Component {
         this.setState({
             displayAddModal: fabToggled,
         });
-        console.log(this.state.displayAddModal);
     }
     getPageByTitle(title) {
         if (title === 'All')
@@ -82,4 +89,14 @@ class Page extends Component {
     }
 }
 
-export default Page;
+function mapStateToProps(state, props) {
+    return {
+        loading: state.pageReducer.loading,
+    }
+}
+
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators(Actions, dispatch);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Page);

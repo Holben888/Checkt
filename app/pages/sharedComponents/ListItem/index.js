@@ -8,12 +8,12 @@ const circleRadius = 15;
 
 class ListItem extends Component {
     render() {
-        const { title, priority, duration, isOngoing, dateTime, useTime } = this.props;
+        const { title, priority, duration, isOngoing, dateTime, useTime, hasDividerLine } = this.props;
         const date = new Date(dateTime);
         return (
             <View style={styles.container}>
                 <View style={[styles.checkCircle, { borderColor: priorityColors[priority] }]}></View>
-                <View style={styles.infoContainer}>
+                <View style={[styles.infoContainer, hasDividerLine ? styles.dividerLine : null]}>
                     <View style={styles.textContainer}>
                         <Text style={styles.title}>{title}</Text>
                         {useTime && <Text style={styles.time}>{date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</Text>}
@@ -33,7 +33,6 @@ const styles = StyleSheet.create({
         paddingLeft: 15,
         minHeight: 75,
         alignItems: 'center',
-
     },
     checkCircle: {
         width: circleRadius,
@@ -50,8 +49,10 @@ const styles = StyleSheet.create({
         paddingVertical: 10,
         flex: 1,
         marginRight: 45,
+    },
+    dividerLine: {
         borderBottomWidth: 1,
-        borderBottomColor: priorityColors[4],
+        borderBottomColor: grayscaleColors.accent,
     },
     textContainer: {
         justifyContent: 'center',

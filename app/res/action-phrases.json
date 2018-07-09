@@ -1,0 +1,9 @@
+[
+    {"type": "day", "phrase": ""},
+    {"type": "repeat", "phrase": "repeats"},
+    {"type": "repeat", "phrase": "repeating"},
+    {"type": "repeat", "phrase": "reoccurs"},
+    {"type": "repeat", "phrase": "reoccuring"},
+    {"type": "repeat", "phrase": "recurring"},
+    {"type": "repeat", "phrase": "recurs"}
+]

@@ -33,15 +33,6 @@
                 "days": "MWF"
             }
         },
-        // {
-        //     "title": "Practice piano for a very, VERY long time boiiiiiiii now let's keep going and make it longer and longer and longer until the box has to resize",
-        //     "priority": 4,
-        //     "dateTime": "2018-06-13T16:25:43.511Z",
-        //     "useTime": false,
-        //     "duration": 60,
-        //     "isOngoing": false,
-        //     "recurring": null
-        // },
         {
             "title": "Practice piano",
             "priority": 4,

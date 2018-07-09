@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { View, StyleSheet, TouchableWithoutFeedback, Animated } from 'react-native';
-import { colors, grayscaleColors } from '../sharedStyles';
+import { colors, grayscaleColors } from '../../../sharedStyles';
 import Icon from 'react-native-vector-icons/Feather';
 
 export default class DetailAddButton extends Component {
     render() {
-        const { disabled } = this.props;
+        const { disabled, onPress } = this.props;
         return (
-            <TouchableWithoutFeedback disabled={disabled}>
+            <TouchableWithoutFeedback disabled={disabled} onPress={onPress}>
                 <View style={[styles.container, styles.disabled]}>
                     <Icon name="arrow-right" size={19} color={grayscaleColors.accent} />
                     {!disabled && <EnabledButton />}

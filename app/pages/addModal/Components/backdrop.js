@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import { View, Animated, StyleSheet, TouchableWithoutFeedback, Dimensions } from 'react-native';
 
-const SCREEN_HEIGHT = Dimensions.get('window').height;
-const SCREEN_WIDTH = Dimensions.get('window').width;
-
 export default class Backdrop extends Component {
     constructor() {
         super();

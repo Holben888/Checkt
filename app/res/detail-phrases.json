@@ -1,0 +1,55 @@
+[
+    {"type": "day", "detail": "today", "phrase": "tod" },
+    {"type": "day", "detail": "today", "phrase": "today" },
+
+    {"type": "day", "detail": "tomorrow", "phrase": "tom" },
+    {"type": "day", "detail": "tomorrow", "phrase": "tmr" },
+    {"type": "day", "detail": "tomorrow", "phrase": "tmrw" },
+    {"type": "day", "detail": "tomorrow", "phrase": "tomorrow" },
+
+    {"type": "day", "detail": "monday", "phrase": "mon" },
+    {"type": "day", "detail": "monday", "phrase": "monday" },
+
+    {"type": "day", "detail": "tuesday", "phrase": "tue" },
+    {"type": "day", "detail": "tuesday", "phrase": "tues" },
+    {"type": "day", "detail": "tuesday", "phrase": "tuesday" },
+
+    {"type": "day", "detail": "wednesday", "phrase": "wed" },
+    {"type": "day", "detail": "wednesday", "phrase": "weds" },
+    {"type": "day", "detail": "wednesday", "phrase": "wednesday" },
+
+    {"type": "day", "detail": "thursday", "phrase": "thu" },
+    {"type": "day", "detail": "thursday", "phrase": "thur" },
+    {"type": "day", "detail": "thursday", "phrase": "thurs" },
+    {"type": "day", "detail": "thursday", "phrase": "thursday" },
+
+    {"type": "day", "detail": "friday", "phrase": "fri" },
+    {"type": "day", "detail": "friday", "phrase": "friday" },
+
+    {"type": "day", "detail": "saturday", "phrase": "sat" },
+    {"type": "day", "detail": "saturday", "phrase": "saturday" },
+
+    {"type": "day", "detail": "sunday", "phrase": "sun" },
+    {"type": "day", "detail": "sunday", "phrase": "sunday" },
+    
+    {"type": "repeat", "detail": "daily", "phrase": "daily" },
+    {"type": "repeat", "detail": "daily", "phrase": "ed" },
+    {"type": "repeat", "detail": "daily", "phrase": "everyday" },
+    {"type": "repeat", "detail": "daily", "phrase": "every day" },
+
+    {"type": "repeat", "detail": "eod", "phrase": "eod" },
+    {"type": "repeat", "detail": "eod", "phrase": "every other day" },
+
+    {"type": "repeat", "detail": "weekly", "phrase": "weekly" },
+    {"type": "repeat", "detail": "weekly", "phrase": "ew" },
+    {"type": "repeat", "detail": "weekly", "phrase": "every week" },
+
+    {"type": "repeat", "detail": "monthly", "phrase": "monthly" },
+    {"type": "repeat", "detail": "monthly", "phrase": "em" },
+    {"type": "repeat", "detail": "monthly", "phrase": "every month" },
+    
+    {"type": "repeat", "detail": "yearly", "phrase": "yearly" },
+    {"type": "repeat", "detail": "yearly", "phrase": "annually" },
+    {"type": "repeat", "detail": "yearly", "phrase": "ey" },
+    {"type": "repeat", "detail": "yearly", "phrase": "every year" }
+]

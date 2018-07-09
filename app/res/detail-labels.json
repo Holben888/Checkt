@@ -1,0 +1,7 @@
+[
+    {"type": "day", "label": "Date"},
+    {"type": "time", "label": "Time"},
+    {"type": "repeat", "label": "Repeats"},
+    {"type": "duration", "label": "Duration"},
+    {"type": "collection", "label": "Collection"}
+]

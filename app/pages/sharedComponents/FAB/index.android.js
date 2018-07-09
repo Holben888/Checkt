@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, TouchableOpacity } from 'react-native';
 import { colors } from '../../sharedStyles';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 export default class FAB extends Component {
     render() {
+        const { onPress } = this.props;
         return (
-            <View style={styles.container}>
-                <Icon name="ios-add" size={30} color={colors.white} style={styles.icon} />
-            </View>
+            <TouchableOpacity style={styles.container} onPress={onPress}>
+                <Icon name="md-add" size={30} color={colors.white} style={styles.icon} />
+            </TouchableOpacity>
         )
     }
 };

@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Text, View, SectionList } from 'react-native';
-import { bindActionCreators } from 'redux';
 import { ListItem, SectionHeader, SectionHeaderActionable, FAB } from '../sharedComponents';
 import { daysOfWeekShort, daysOfWeek, months, currentDate } from '../../res/date-resources';
-import * as Actions from './actions';
 
 class WeekPage extends Component {
     constructor() {
@@ -15,16 +13,20 @@ class WeekPage extends Component {
             showAddModal: false,
         }
     }
-    componentWillMount() {
-        this.props.getTodoList();
-    }
     groupByDate(data) {
+        if (!data)
+            return [];
         const map = new Map();
         data.forEach((item) => {
             const date = new Date(item.dateTime);
             const key = (date.getTime() >= currentDate.getTime()) ? date.toLocaleDateString() : 'Overdue';
             const collection = map.get(key);
-            collection ? map.set(key, [...collection, item]) : map.set(key, [item]);
+            if (collection && collection.length) {
+                collection[collection.length - 1].hasDividerLine = true;
+                map.set(key, [...collection, item]);
+            } else {
+                map.set(key, [item]);
+            }
         });
         return [...map.entries()];
     }
@@ -62,11 +64,12 @@ class WeekPage extends Component {
                         if (title === 'Overdue')
                             return (<SectionHeader primary={title} count={data.length} type={title} />);
                         else
-                            return (<SectionHeaderActionable {...this.getSectionHeaderText(title)} count={data.length} icon="ios-add" style={{ marginTop: -1 }} />);
+                            return (<SectionHeaderActionable {...this.getSectionHeaderText(title)} count={data.length} icon="ios-add" style={{ marginTop: 0 }} />);
                     }
                     }
                     sections={this.groupByDate(todoListData).map((item) => {
-                        return { title: item[0], data: item[1] }
+                        const [itemTitle, itemData] = item;
+                        return { title: itemTitle, data: itemData }
                     })}
                     keyExtractor={(item, index) => index.toString()} />
                 <FAB onPress={onFabPress} />
@@ -77,13 +80,8 @@ class WeekPage extends Component {
 
 function mapStateToProps(state, props) {
     return {
-        loading: state.weekPageReducer.loading,
-        todoListData: state.weekPageReducer.data,
+        todoListData: state.pageReducer.todoListData,
     }
 }
 
-function mapDispatchToProps(dispatch) {
-    return bindActionCreators(Actions, dispatch);
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(WeekPage);
+export default connect(mapStateToProps)(WeekPage);
